@@ -1,0 +1,29 @@
+/*
+*	Compressed and generated using gulp.js sass/compress build tools
+*
+*	@title: 	_ui.badge.scss (partial)
+* 	@project: 	
+* 	@author:	Jonathan Brincat@pix8.co.uk <jonathan@pix8.co.uk>
+**/
+
+
+@charset "UTF-8";
+
+
+/* =============================================================================
+	UI badge
+	========================================================================== */
+.ui__badge {
+	background-color: $theme__primary;
+	border-radius: 999px;
+	color: $color__white;
+	line-height: 1;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	white-space: nowrap;
+	min-width: 2em;
+	min-height: 2em;
+	padding: 0.5em 0.8em;
+	margin: 0.2em;
+}

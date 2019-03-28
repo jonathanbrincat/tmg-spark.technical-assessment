@@ -1,0 +1,48 @@
+/*
+*	Compressed and generated using gulp.js sass/compress build tools
+*
+*	@title: 	main.scss
+* 	@project: 	
+* 	@author:	Jonathan Brincat@pix8.co.uk <jonathan@pix8.co.uk>
+**/
+
+
+/* =============================================================================
+	Vendor
+	========================================================================== */
+@import 'breakpoint';															//https://www.npmjs.com/package/breakpoint-sass
+@import 'vendor/vendor.flexboxgrid';
+@import 'normalize';
+
+
+
+/* =============================================================================
+	Config
+	========================================================================== */
+@import 'app.vars';
+@import 'app.typography';
+
+
+/* =============================================================================
+	00. Core styles
+	========================================================================== */
+@import 'core.theme';
+@import 'core.reset';
+@import 'core.reboot';
+@import 'core.utils';
+@import 'core.responsive';
+
+
+/* =============================================================================
+	01. Generic/Global styles
+	========================================================================== */
+@import 'styles.form';
+@import 'styles.main';
+
+
+/* =============================================================================
+	UI Component styles (modular constructs)
+	========================================================================== */
+@import 'ui.btn';
+@import 'ui.badge';
+@import 'ui.card';

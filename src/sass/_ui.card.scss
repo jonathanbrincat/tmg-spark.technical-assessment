@@ -1,0 +1,35 @@
+/*
+*	Compressed and generated using gulp.js sass/compress build tools
+*
+*	@title: 	_ui.card.scss (partial)
+* 	@project: 	
+* 	@author:	Jonathan Brincat@pix8.co.uk <jonathan@pix8.co.uk>
+**/
+
+@charset "UTF-8";
+
+
+/* =============================================================================
+	UI card
+	========================================================================== */
+.ui__card {
+	border: 2px solid $color__black;
+	background-color: #e6e6e6;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	min-height: 100%;
+	position: relative;
+	padding: 10px;
+	margin: 20px 0;
+	display: flex;
+	flex-direction: column;
+
+	figure {
+		background-position: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border: 2px solid #000;
+		margin: 10px 0;
+	}
+}

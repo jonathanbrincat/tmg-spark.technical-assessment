@@ -1,0 +1,50 @@
+doctype html
+
+<!--[if (lt IE 9)&!(IEMobile)]><html class="no-js no-mq lt-ie9"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+html.no-js(lang="en")
+	<!--<![endif]-->
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='ie=edge, chrome=1')
+
+		block _globals
+		block _locals
+
+		title!= pageTitle
+
+		meta(name='description', content='')
+		meta(name='keywords', content='')
+		meta(name='author', content='pix8')
+
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+		//- include _includes/_favicon
+
+		//- ========================================
+			SCRIPTS
+			========================================
+
+		//- include ../_includes/_analytics
+		
+		block _headscripts
+
+		//- ========================================
+			STYLES
+			========================================
+		link(href="https://fonts.googleapis.com/css?family=Quicksand|Nunito:200,300,400,400i,500,700,700i,900" rel="stylesheet")
+		link(rel='stylesheet', href='/styles/main.css')
+
+		block _headstyles
+
+	body
+		block _bodystyles
+
+		block _default
+
+		//- ========================================
+			SCRIPTS
+			========================================
+		script(src='/scripts/app.bundle.js')
+
+		block _bodyscripts
