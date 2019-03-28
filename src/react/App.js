@@ -10,6 +10,7 @@ import FlickrComponent from './component/flickr/Flickr.component'
 import FlickrService from '../js/api/flickr'
 
 import _ from 'lodash'
+// DEVNOTE: GSAP integration put on hold until further exploration work is undertaken into orchestrating composition/sequencing into react lifecycles
 //import { TimelineLite, CSSPlugin } from 'gsap/all'
 
 
@@ -62,10 +63,10 @@ export default class App extends Component {
 						data: response,
 						flickr: this.state.flickr.concat(response.items),
 						isLoading: false
-					}, () => {
+					}/*, () => {
 
 						this.tween.staggerFrom(this.animationStack, 0.5, {autoAlpha: 1, y: 200}, 0.1);
-					});
+					}*/);
 
 					// Register event listener to expedite infinite scroll polling
 					window.addEventListener("scroll", this.scrollHandler, false);
