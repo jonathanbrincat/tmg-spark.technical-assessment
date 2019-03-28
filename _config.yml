@@ -20,7 +20,7 @@ defaults:
 
 #source: ./src
 
-destination: ./dist
+#destination: ./dist
 
 sass:
   sass_dir: assets/_sass
