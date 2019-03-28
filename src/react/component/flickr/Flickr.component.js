@@ -13,8 +13,6 @@ import {
 	FlickrMessage
 } from './Flickr.style'
 
-import { TimelineLite, CSSPlugin } from 'gsap/all'
-
 
 export default class Flickr extends Component {
 
