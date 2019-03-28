@@ -18,7 +18,7 @@ module.exports = merge(baseWebpackConfig, {
 	devtool: config.prod.sourceMap ? '#source-map' : false,
 	
 	output: {
-		path: path.resolve(__dirname, '../dist')
+		path: path.resolve(__dirname, './dist')
 	},
 
 	optimization: {
