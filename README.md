@@ -16,7 +16,7 @@ npm start
 [Hosted on Github pages](https://pix8.github.io/tmg-spark/)
 
 ## Explanation of tech used
-Note: Build tooling and allied stack is my own concoction and maintained by myself - Pogo App](https://github.com/pix8/pogo-app). It's boilerplate some stuff in there is not relevant; I have removed most of the cruft but retained the Vuejs supporting infrastructure to keep my options open.  
+Note: Build tooling and allied stack is my own concoction and maintained by myself - [Pogo App](https://github.com/pix8/pogo-app). It's boilerplate some stuff in there is not relevant; I have removed most of the cruft but retained the Vuejs supporting infrastructure to keep my options open.  
 
 ### Reactjs
 Popular and universally acclaimed front-end framework. Could of quite happily gone with Vuejs however I feel React's prevalence makes it a more real-world candidate to showcase. Reactjs is ideal for rapidly building out user interfaces and component based architectures. Supported by a virtual DOM representation to drive interactions and reactivity. With reactivity itself the mechanism powering stateful transactions that bind a model(data) to drive(hydrate) the view(interface). When faced with a task declaratively describing a user interface that is hydrated by consuming a data service. Versus a clean sheet approach with vanilla javascript or using an assistive library such as Reactjs. Unless you are a sucker for pain, it really is a no-brainer.
