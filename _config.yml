@@ -40,12 +40,12 @@ exclude: [
   example
 ]
 
-title: '@pix8/UI Accordion'
+title: '@pix8/ TMG technical assessment'
 #logo: /assets/img/logo.png
 logo: /assets/img/pixie-dust.gif
-description: A simple JavaScript Accordion with a simple objective.
+description: A Flickr public feed component built in react
 show_downloads: true
 google_analytics:
 
-repository: pix8/ui-accordion
+repository: pix8/tmg-technical-test
 #theme: jekyll-theme-minimal
