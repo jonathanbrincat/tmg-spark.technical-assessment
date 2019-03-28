@@ -18,8 +18,11 @@ export default class Flickr extends Component {
 
 	static propTypes = {
 		data: PropTypes.array.isRequired,
-		status: PropTypes.bool,
+		isLoading: PropTypes.bool,
+		isActive: PropTypes.bool,
+		isError: PropTypes.bool,
 		filterByTag: PropTypes.array,
+		setIsActive: PropTypes.func,
 		updateFilterByTag: PropTypes.func,
 		animationStack: PropTypes.array
 	}
@@ -28,15 +31,12 @@ export default class Flickr extends Component {
 		super(props);
 
 		this.state = {
-			queryByTag: "",
-			isActive: true 
+			queryByTag: ""
 		}		
 	}
 
 	changeToggleHandler = (event) => {
-		this.setState({
-			isActive: event.target.checked
-		});
+		this.props.setIsActive(event.target.checked);
 	}
 
 	changeQueryTagHandler = (event) => {
@@ -69,8 +69,8 @@ export default class Flickr extends Component {
 	}
 
 	render() {
-		const { queryByTag, isActive } = this.state;
-		const { data, status, filterByTag, animationStack } = this.props;
+		const { queryByTag } = this.state;
+		const { data, isLoading, isActive, filterByTag, animationStack } = this.props;
 
 		return (
 			<ModuleFlickr className="component__flickr">
@@ -120,13 +120,13 @@ export default class Flickr extends Component {
 				}
 
 				{
-					(status || (!status && !data.length) ) && <FlickrStatus>
+					(isLoading || (!isLoading && !data.length) ) && <FlickrStatus>
 						{
-							status && <FlickrMessage>Loading...</FlickrMessage>
+							isLoading && <FlickrMessage>Loading...</FlickrMessage>
 						}
 
 						{
-							(!status && !data.length) && <FlickrMessage>No images found</FlickrMessage>
+							(!isLoading && !data.length) && <FlickrMessage>No images found</FlickrMessage>
 						}
 					</FlickrStatus>
 				}

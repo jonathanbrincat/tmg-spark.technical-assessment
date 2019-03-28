@@ -21,11 +21,11 @@ export default class App extends Component {
 
 		// Declare initial states
 		this.state = {
-			data: null,
-			flickr: [],
+			data: [],
 			filterByTag: [],
 			isLoading: false,
-			isError: false,
+			isActive: true,
+			isError: false
 		}
 
 		this.flickRComponent = null;
@@ -49,6 +49,8 @@ export default class App extends Component {
 
 	hydrate(_filter = []) {
 
+		if(!this.state.isActive) return;
+
 		this.setState({
 			isLoading: true
 		}, () => {
@@ -60,8 +62,7 @@ export default class App extends Component {
 				.then( (response) => {
 
 					this.setState({
-						data: response,
-						flickr: this.state.flickr.concat(response.items),
+						data: this.state.data.concat(response.items),
 						isLoading: false
 					}/*, () => {
 
@@ -84,7 +85,7 @@ export default class App extends Component {
 
 	reset() {
 		this.setState({
-			flickr: []
+			data: []
 		},
 
 			this.hydrate()
@@ -97,6 +98,12 @@ export default class App extends Component {
 		},
 			this.reset()
 		);
+	}
+
+	setIsActive = (_isActive) => {
+		this.setState({
+			isActive: _isActive
+		});
 	}
 
 	// DEVNOTE: Candidate for dedicated/discreet reusable module with adaptation/refinement
@@ -148,8 +155,6 @@ export default class App extends Component {
 	}
 
 	render() {
-		const { data, flickr, filterByTag, isLoading } = this.state;
-
 		return (
 			<Router>				
 				<header id="app--masthead" role="complementary">
@@ -180,11 +185,10 @@ export default class App extends Component {
 							<p><strong>Warning:</strong> this is a 3rd party consumed public service that we do not control. Although we will do our utmost to safeguard your user experience within the realms of the mechanisms we have at our disposal. We ultimately can not control rogue or malevolent content submitted by individual users that do not abide by the terms of the flickr service. No kittens were harmed in the making of this component.</p>
 							
 							<FlickrComponent
-								status={ isLoading }
-								data={ flickr }
-								animationStack = { this.animationStack }
-								filterByTag={ filterByTag }
+								{ ...this.state }
+								setIsActive={ this.setIsActive }
 								updateFilterByTag={ this.updateFilterByTag }
+								animationStack = { this.animationStack }
 								ref={ (el) => this.flickrComponent = el }
 								/>
 						</div>
