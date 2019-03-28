@@ -1,0 +1,77 @@
+/*
+*	Compressed and generated using gulp.js sass/compress build tools
+*
+*	@title: 	_app.vars.scss (partial)
+* 	@project: 	
+* 	@author:    Jonathan Brincat@pix8.co.uk, <jonathan@pix8.co.uk>
+**/
+
+//SassScript datatypes = numbers(ints,decimal,units[px,em,rem,%]), strings, colours(string,hex,rgba,hsla), boolean, null, delimited data sets(csv, space delimited)
+//SassScript interpolation = #{str}, use variables in selectors and property names + to escape a string(forgo "", '' wrapping) + encapsulate operations for dynamic values
+
+//== and != equality operators on all datatypes, + can be used to concatenate strings, arithmetic operators (+,-,*,/,%) and relational operators(<,>,<=,>=) on numbers - not division operations should be surrounded in parentheses as '/'' is an accepted css convention
+
+@charset "UTF-8";
+
+
+/* =============================================================================
+	Paths
+	========================================================================== */
+$app__fontpath: '../font/';
+$app__imgpath: '../img/';
+$app__svgpath: '../svg/';
+
+
+/* =============================================================================
+	Palette
+	========================================================================== */
+@import 'app.palette';
+
+
+/* =============================================================================
+	Type
+	========================================================================== */
+$app__text-colour:			$color__tr-dark-grey 	!default;
+$app__text-color:			$app__text-colour;
+$app__text-size:			1.6rem;
+$app__text-line-height:		1.6;
+
+
+/* =============================================================================
+	Core / Base values 
+	========================================================================== */
+$baseFontSize: 					14px 				!default;
+$baseLineHeight: 				1.5 				!default; //150% - unitless to mitigate inheritence
+
+$borderRadius: 					6px 				!default;
+$borderWeight: 					2px 				!default;
+
+
+/* =============================================================================
+	Spacing
+	========================================================================== */
+$app__margin:				20px 					!default;
+$app__padding:				20px 					!default;
+
+
+/* =============================================================================
+	Media Queries Breakpoints / Screen sizes
+	========================================================================== */
+$app__screen-sm-min:		600px 					!default;
+//----------------------------------------------------------------------------//
+$app__screen-md-min:		900px 					!default;
+//----------------------------------------------------------------------------//
+$app__screen-lg-min:		1200px 					!default;
+
+
+/* =============================================================================
+	Responsive Grid System
+	========================================================================== */
+$app__grid:					12 						!default;
+$app__gutter:				$app__padding 			!default;
+//DEVNOTE: gutter needs to be configurable at XL breakpoint
+
+$app__container-sm:			auto 					!default;
+$app__container-md:			$app__container-sm		!default;
+$app__container-lg:			$app__container-md		!default;
+//DEVNOTE: Bootstrap has 4 breakpoints not 5. so need to extend to XL.

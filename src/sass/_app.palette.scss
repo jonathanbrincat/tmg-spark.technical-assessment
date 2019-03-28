@@ -1,0 +1,38 @@
+/*
+*	Compressed and generated using gulp.js sass/compress build tools
+*
+*	@title: 	_app.palette.scss (partial)
+* 	@project: 	
+* 	@author: 	Jonathan Brincat@pix8.co.uk, <jonathan@pix8.co.uk>
+**/
+
+@charset "UTF-8";
+
+
+
+/* =============================================================================
+	Palette
+	========================================================================== */
+$color__black:				rgb(0,0,0) 				!default;
+$color__white:				rgb(255,255,255) 		!default;
+
+$color__tr-dark-grey:		rgb(77,77,77)			!default; 		//#4D4D4D
+$color__tr-dark-gray:		$color__tr-dark-grey	!default;
+$color__tr-grey:			rgb(102,102,102) 		!default; 		//#666666
+$color__tr-gray:			$color__tr-grey 		!default; 
+$color__tr-light-grey:  	rgb(175,175,175) 		!default; 		//#AFAFAF
+$color__tr-light-gray:  	$color__tr-light-grey	!default;
+$color__tr-silver:  		rgb(221,221,221) 		!default; 		//#DDDDDD
+
+$color__dark-grey: 			rgb(38, 38, 38) 		!default; 		//#262626
+$color__dark-gray: 			$color__dark-grey 		!default;
+$color__grey: 				rgb(61, 61, 61) 		!default; 		//#3D3D3D
+$color__gray: 				$color__grey 			!default;
+$color__light-grey: 		rgb(234,234,234) 		!default; 		//#EAEAEA
+$color__light-gray: 		$color__light-grey 		!default;
+$color__silver: 			rgb(244,244,244)		!default; 		//#F4F4F4
+
+$color__mint:				rgb(22,170,180)			!default; 		//#19aab4
+$color__lime: 				rgb(195,213,21)			!default; 		//#c3d515
+$color__red:				rgb(160,0,0)			!default;		//#A00000
+$color__pink:				rgb(236,0,140)			!default;		//#EC008C

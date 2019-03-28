@@ -1,0 +1,34 @@
+/*
+*	Compressed and generated using gulp.js sass/compress build tools
+*
+*	@title: 	_core.responsive.scss (partial)
+* 	@project: 	
+* 	@author: 	Jonathan Brincat@pix8.co.uk, <jonathan@pix8.co.uk>
+**/
+
+@charset "UTF-8";
+
+
+/* =============================================================================
+	Core Responsive breakpoints
+	========================================================================== */
+.container {
+	max-width: 480px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include breakpoint($app__screen-sm-min) {
+		max-width: none;
+	}
+
+	@include breakpoint($app__screen-md-min) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	@include breakpoint($app__screen-lg-min) {
+		max-width: 1400px;
+	}
+}

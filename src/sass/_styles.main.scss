@@ -1,0 +1,127 @@
+/*
+*	Compressed and generated using grunt.js sass/compress build tools
+*
+*	@title: 	styles.main.scss (partial)
+* 	@project: 	
+* 	@author: 	Jonathan Brincat@pix8.co.uk, <jonathan@pix8.co.uk>
+**/
+@charset "UTF-8";
+
+//devnote: in future, can use viewport units instead of troublesome height 100%
+
+/* =============================================================================
+	Core
+	========================================================================== */
+html, body {
+	background: $color__white none;
+	min-height: 100vh;
+}
+
+html {
+}
+
+body{
+}
+
+/* =============================================================================
+	App
+	========================================================================== */
+#app--react {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	position: relative;
+}
+
+/* =============================================================================
+	Masthead
+	========================================================================== */
+	#app--masthead {
+		background-color: $theme__secondary;
+		background-image: url('/image/background/bg__masthead.jpg');
+		background-size: cover;
+		background-position: 50%;
+		color: $color__white;
+		padding: 12rem 2rem 1rem;
+
+		@include breakpoint($app__screen-md-min) {
+			padding-top: 16rem;
+			padding-left: 4rem;
+		}
+
+		h1, h2, h3, h4, h5, h6,
+		p, ul, ol, dl {
+			color: inherit;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			span {
+				background-color: $color__black;
+				padding: 2px;
+			}
+		}
+	}
+
+	#nav--primary {
+		background-color: $color__black;
+		color: $color__white;
+		position: sticky;
+		top: 0;
+		z-index: 9;
+		padding-left: 2rem;
+
+		@include breakpoint($app__screen-md-min) {
+			padding-left: 4rem;
+		}
+	}
+
+	nav {
+		ul {
+			list-style: none;
+			padding-left: 0;
+		}
+
+		li {
+			display: inline-block;
+			margin: 0 10px;
+		}
+
+		a {
+			text-decoration: none;
+			color: inherit;
+			display: block;
+
+			&.active {
+				color: $theme__primary;
+			}
+		}
+	}
+
+/* =============================================================================
+	Footer(Site/app)
+	========================================================================== */
+	#app--footer{
+		background-color: $color__black;
+		color: $color__white;
+		padding: 1rem 0;
+
+		h1, h2, h3, h4, h5, h6,
+		p, ul, ol, dl {
+			color: inherit;
+		}
+	}
+
+/* =============================================================================
+	Body
+	========================================================================== */
+	#app--body{
+		flex-grow: 1;
+
+		@include breakpoint($app__screen-md-min) {
+			margin-top: 5rem;
+		}
+
+		section {
+			margin: 5rem 0;
+		}
+	}

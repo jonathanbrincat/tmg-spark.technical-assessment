@@ -1,0 +1,170 @@
+/*
+*	Compressed and generated using gulp.js sass/compress build tools
+*
+*	@title: 	_app.typography.scss (partial)
+* 	@project: 	
+* 	@author: 	Jonathan Brincat@pix8.co.uk, <jonathan@pix8.co.uk>
+**/
+
+@charset "UTF-8";
+
+
+@mixin font-size($value) {
+	font-size: ($value / ($value * 0 + 1)) * 10 + px; // <ie9
+	font-size: $value / ($value * 0 + 1) + rem;
+}
+
+// 	eot 		--------- 	 	>ie5
+// 	woff 		--------- 	 	webkit(chrome), firefox, opera, >ie8, ios, android, blackberry, ie mobile
+// 	ttf/otf 	--------- 	 	webkit, firefox, opera(>15), ios, android, blackberry
+// 	svg 		--------- 		webkit(safari), opera, ios, android, blackberry
+
+// 	200			--------- 		extralight/ultralight
+// 	300			--------- 		light
+// 	400 		--------- 		regular
+// 	500 		--------- 		medium
+// 	600			--------- 		semibold
+// 	700			--------- 		bold
+// 	800			--------- 		extrabold/black
+
+
+/* =============================================================================
+	Quicksand (Google Fonts)
+	========================================================================== */
+/*@font-face{
+	font-family: 'Quicksand';
+	src: 	url('#{$app__fontpath}quicksand/quicksand-200-ultralight.eot');
+	src: 	url('#{$app__fontpath}quicksand/quicksand-200-ultralight.eot?#iefix') format('embedded-opentype'),
+			url('#{$app__fontpath}quicksand/quicksand-200-ultralight.woff') format('woff'),
+			url('#{$app__fontpath}quicksand/quicksand-200-ultralight.ttf') format('truetype'),
+			url('#{$app__fontpath}quicksand/quicksand-200-ultralight.svg#Quicksand') format('svg');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Quicksand';
+	src: 	url('#{$app__fontpath}quicksand/quicksand-200-ultralightitalic.eot');
+	src: 	url('#{$app__fontpath}quicksand/quicksand-200-ultralightitalic.eot?#iefix') format('embedded-opentype'),
+			url('#{$app__fontpath}quicksand/quicksand-200-ultralightitalic.woff') format('woff'),
+			url('#{$app__fontpath}quicksand/quicksand-200-ultralightitalic.ttf') format('truetype'),
+			url('#{$app__fontpath}quicksand/quicksand-200-ultralightitalic.svg#Quicksand') format('svg');
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face{
+	font-family: 'Quicksand';
+	src: 	url('#{$app__fontpath}quicksand/quicksand-300-light.eot');
+	src: 	url('#{$app__fontpath}quicksand/quicksand-300-light.eot?#iefix') format('embedded-opentype'),
+			url('#{$app__fontpath}quicksand/quicksand-300-light.woff') format('woff'),
+			url('#{$app__fontpath}quicksand/quicksand-300-light.ttf') format('truetype'),
+			url('#{$app__fontpath}quicksand/quicksand-300-light.svg#Quicksand') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Quicksand';
+	src: 	url('#{$app__fontpath}quicksand/quicksand-300-lightitalic.eot');
+	src: 	url('#{$app__fontpath}quicksand/quicksand-300-lightitalic.eot?#iefix') format('embedded-opentype'),
+			url('#{$app__fontpath}quicksand/quicksand-300-lightitalic.woff') format('woff'),
+			url('#{$app__fontpath}quicksand/quicksand-300-lightitalic.ttf') format('truetype'),
+			url('#{$app__fontpath}quicksand/quicksand-300-lightitalic.svg#Quicksand') format('svg');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face{
+	font-family: 'Quicksand';
+	src: 	url('#{$app__fontpath}quicksand/quicksand-400-regular.eot');
+	src: 	url('#{$app__fontpath}quicksand/quicksand-400-regular.eot?#iefix') format('embedded-opentype'),
+			url('#{$app__fontpath}quicksand/quicksand-400-regular.woff') format('woff'),
+			url('#{$app__fontpath}quicksand/quicksand-400-regular.ttf') format('truetype'),
+			url('#{$app__fontpath}quicksand/quicksand-400-regular.svg#Quicksand') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Quicksand';
+	src: 	url('#{$app__fontpath}quicksand/quicksand-400-regularitalic.eot');
+	src: 	url('#{$app__fontpath}quicksand/quicksand-400-regularitalic.eot?#iefix') format('embedded-opentype'),
+			url('#{$app__fontpath}quicksand/quicksand-400-regularitalic.woff') format('woff'),
+			url('#{$app__fontpath}quicksand/quicksand-400-regularitalic.ttf') format('truetype'),
+			url('#{$app__fontpath}quicksand/quicksand-400-regularitalic.svg#Quicksand') format('svg');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face{
+	font-family: 'Quicksand';
+	src: 	url('#{$app__fontpath}quicksand/quicksand-500-medium.eot');
+	src: 	url('#{$app__fontpath}quicksand/quicksand-500-medium.eot?#iefix') format('embedded-opentype'),
+			url('#{$app__fontpath}quicksand/quicksand-500-medium.woff') format('woff'),
+			url('#{$app__fontpath}quicksand/quicksand-500-medium.ttf') format('truetype'),
+			url('#{$app__fontpath}quicksand/quicksand-500-medium.svg#Quicksand') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Quicksand';
+	src: 	url('#{$app__fontpath}quicksand/quicksand-500-mediumitalic.eot');
+	src: 	url('#{$app__fontpath}quicksand/quicksand-500-mediumitalic.eot?#iefix') format('embedded-opentype'),
+			url('#{$app__fontpath}quicksand/quicksand-500-mediumitalic.woff') format('woff'),
+			url('#{$app__fontpath}quicksand/quicksand-500-mediumitalic.ttf') format('truetype'),
+			url('#{$app__fontpath}quicksand/quicksand-500-mediumitalic.svg#Quicksand') format('svg');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face{
+	font-family: 'Quicksand';
+	src: 	url('#{$app__fontpath}quicksand/quicksand-700-bold.eot');
+	src: 	url('#{$app__fontpath}quicksand/quicksand-700-bold.eot?#iefix') format('embedded-opentype'),
+			url('#{$app__fontpath}quicksand/quicksand-700-bold.woff') format('woff'),
+			url('#{$app__fontpath}quicksand/quicksand-700-bold.ttf') format('truetype'),
+			url('#{$app__fontpath}quicksand/quicksand-700-bold.svg#Quicksand') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Quicksand';
+	src: 	url('#{$app__fontpath}quicksand/quicksand-700-bolditalic.eot');
+	src: 	url('#{$app__fontpath}quicksand/quicksand-700-bolditalic.eot?#iefix') format('embedded-opentype'),
+			url('#{$app__fontpath}quicksand/quicksand-700-bolditalic.woff') format('woff'),
+			url('#{$app__fontpath}quicksand/quicksand-700-bolditalic.ttf') format('truetype'),
+			url('#{$app__fontpath}quicksand/quicksand-700-bolditalic.svg#Quicksand') format('svg');
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face{
+	font-family: 'Quicksand';
+	src: 	url('#{$app__fontpath}quicksand/quicksand-800-black.eot');
+	src: 	url('#{$app__fontpath}quicksand/quicksand-800-black.eot?#iefix') format('embedded-opentype'),
+			url('#{$app__fontpath}quicksand/quicksand-800-black.woff') format('woff'),
+			url('#{$app__fontpath}quicksand/quicksand-800-black.ttf') format('truetype'),
+			url('#{$app__fontpath}quicksand/quicksand-800-black.svg#Quicksand') format('svg');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Quicksand';
+	src: 	url('#{$app__fontpath}quicksand/quicksand-800-blackitalic.eot');
+	src: 	url('#{$app__fontpath}quicksand/quicksand-800-blackitalic.eot?#iefix') format('embedded-opentype'),
+			url('#{$app__fontpath}quicksand/quicksand-800-blackitalic.woff') format('woff'),
+			url('#{$app__fontpath}quicksand/quicksand-800-blackitalic.ttf') format('truetype'),
+			url('#{$app__fontpath}quicksand/quicksand-800-blackitalic.svg#Quicksand') format('svg');
+	font-weight: 800;
+	font-style: italic;
+}*/
+
+
+$font__regular:					arial, helvetica, clean, sans-serif 				!default;
+$font__monospace:				Menlo, Monaco, Consolas, "Courier New", monospace 	!default;
+$font__nunito:					'Nunito', arial, clean, sans-serif;
+$font__quicksand:				'Quicksand', helvetica, clean, sans-serif;

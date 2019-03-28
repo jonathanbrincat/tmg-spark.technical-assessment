@@ -1,0 +1,206 @@
+/*
+*	Compressed and generated using gulp.js sass/compress build tools
+*
+*	@title: 	_ui.btn.scss (partial)
+* 	@project: 	
+* 	@author:	Jonathan Brincat@pix8.co.uk <jonathan@pix8.co.uk>
+**/
+
+@charset "UTF-8";
+
+
+/* =============================================================================
+	UI btn - generic
+	========================================================================== */
+.ui__btn {
+	border-width: 2px;
+	border-style: solid;
+	line-height: 1.5;
+	text-decoration: none;
+	display: inline-block;
+	min-width: 50px;
+	padding: 12px 30px;
+
+	transition-property: background-color, border-color, color;
+	transition-duration: 400ms;
+	transition-timing-function: ease;
+
+	&:hover,
+	&:focus {
+		transition-property: none;
+		text-decoration: none;
+	}
+}
+
+p.ui__btn, li.ui__btn {
+	padding: 0;
+	min-width: 0;
+
+	a {
+		text-decoration: none;
+		display: inline-block;
+		min-width: 50px;
+		padding: 12px 30px;
+
+		&:hover,
+		&:focus {
+			color: inherit;
+		}
+	}
+}
+
+/* =============================================================================
+	UI btn > toggle
+	========================================================================== */
+.btn__toggle {
+	position: relative;
+	padding-left: 20px;
+	padding-right: 40px;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		width: 10px;
+		height: 10px;
+		margin-top: -1px;
+		border-top: 2px solid $color__black;
+		border-right: 2px solid $color__black;
+		transition: transform .5s;
+		transform-origin: 50%;
+		transform: translate(0, -50%) rotate(135deg);
+
+		transition-property: border-color;
+		transition-duration: 400ms;
+		transition-timing-function: ease;
+	}
+
+	&.status__active {
+		&:after {
+			transform: translate(0, -50%) rotate(-45deg);
+		}
+	}
+
+	&:hover {
+		&:after {
+			border-color: $color__white;
+
+			transition-property: none;
+		}
+	}
+}
+
+/* =============================================================================
+	UI btn > pill
+	========================================================================== */
+.btn__pill {
+	border-radius: 999px;
+}
+
+/* =============================================================================
+	UI btn > round / circular
+	========================================================================== */
+.btn__round,
+.btn__circular {
+	border-radius: 50%;
+	min-width: 0;
+	width: 3.333em;
+	height: 3.333em;
+	padding: 10px;
+	overflow: hidden;
+}
+
+/* =============================================================================
+	UI btn SIZE
+	========================================================================== */
+.btn__size-{
+	&sm {
+		padding: 5px 20px;
+
+		&.btn__round,
+		&.btn__circular {
+			text-align: center;
+			padding: 5px;
+			width: 2.5em;
+			height: 2.5em;
+		}
+	}
+}
+
+p.ui__btn, li.ui__btn {
+	&.btn__size-{
+		&sm {
+			padding: 0;
+
+			a {
+				padding: 5px 20px;
+			}
+
+			&.btn__round,
+			&.btn__circular {
+
+				a {
+					text-align: center;
+					padding: 5px;
+					min-width: 0;
+					width: 2.5em;
+					height: 2.5em;
+				}
+			}
+		}
+	}
+}
+
+/* =============================================================================
+	UI btn THEMES
+	========================================================================== */
+.ui__btn {
+	background-color: $color__white;
+	border-color: $color__black;
+	color: $color__black;
+
+	&:hover {
+		background-color: $theme__primary;
+		border-color: $theme__primary;
+		color: $color__white;
+	}
+
+	&:focus {
+	}
+
+	&:disabled {
+		&,
+		&:hover,
+		&:focus {
+			background-color: $color__white;
+			border-color: $color__tr-light-grey;
+			color: $color__tr-light-grey;
+		}
+	}
+}
+
+.btn__primary {
+	background-color: $color__black;
+	border-color: $color__black;
+	color: $color__white;
+
+	&:hover {
+		background-color: $theme__primary;
+		border-color: $theme__primary;
+	}
+
+	&:focus {
+	}
+
+	&:disabled {
+
+		&,
+		&:hover,
+		&:focus {
+			background-color: $color__tr-light-grey;
+			border-color: $color__tr-light-grey;
+			color: $color__white;
+		}
+	}
+}

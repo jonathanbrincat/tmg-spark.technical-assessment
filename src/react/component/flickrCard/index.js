@@ -1,0 +1,1 @@
+export { default as FlickrCard } from './FlickrCard.component'
