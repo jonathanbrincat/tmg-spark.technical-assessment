@@ -10,6 +10,7 @@ import FlickrComponent from './component/flickr/Flickr.component'
 import FlickrService from '../js/api/flickr'
 
 import _ from 'lodash'
+//import { TimelineLite, CSSPlugin } from 'gsap/all'
 
 
 export default class App extends Component {
@@ -29,7 +30,8 @@ export default class App extends Component {
 		this.flickRComponent = null;
 		this.animationStack = [];
 
-		this.tween = new TimelineLite();
+		// Instantiate GSAP timeline instance
+		//this.tween = new TimelineLite();
 	}
 
 	componentWillMount() {

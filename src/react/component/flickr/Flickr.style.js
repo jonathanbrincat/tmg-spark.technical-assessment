@@ -21,7 +21,6 @@ const FlickrGallery = styled.ul`
 `
 
 const FlickrToolbar = styled.div`
-
 `
 
 const FlickrFilter = styled.div`
