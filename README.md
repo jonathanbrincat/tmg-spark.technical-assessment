@@ -1,14 +1,3 @@
-## UPDATE
-
-This is the solution to The Telegraphs technical assessment given to prospective candidates wishing to join the Spark team at their London, Victoria office. Needless to say I aced this test because I am a badass and because quite frankly I was far too good for them and far too capable for this role. Unfortunately although it is now common practise for prospective employers to screen candidates with these degrading and humiliating competency tests, the quid-quo-pro isn't available for highly-skilled workers that are in short-supply, looking to join so-called professional organisations to become valued members of their team.
-
-This certaintly didn't rank amongst the most gruelling test I've been subjected to. In certain aspects it was actually quite fun. However as a very experienced and competent developer there was one dastardly flaw with this assessment that did not escape my attention and really did not sit well with me. I later raised and queried this with their internal team and much to my disgust I got confirmation to what I had suspected. The test had been written intentionally with misleading and incorrect instructions and was designed to misdirect and fool the test subject. In other words, it was designed to make you fail. This was their way of sorting the wheat from the chaff.
-
-Although I had personally not fallen victim to this trap it was only because I could leverage my experience and use my better judgement to overrule and work around the issue. I thought this was really really unscrupulous tactic and most of all unethical. Giving people a test that was not possible to pass. Utterly shameful behaviour and a precursor to what was to follow...
-
-So here you are folks. A gift from me to you. Do yourself a favour. Trust me you don't want to work for The Telegraph. Pass their silly test and then politely tell them thanks but no thanks and send them my love.
-
-
 # Telegraph Media Group (Spark) - Technical assessment
 
 Submission
