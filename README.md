@@ -1,22 +1,58 @@
-# Telegraph Media Group (Spark) - Technical assessment
+# Telegraph Media Group(Spark) Technical Assessment March 2019
 
-Submission
+## Frontend developer test
 
-## Getting started
+Your test is to consume the public [Flickr API](https://www.flickr.com/services/api/) and display the results according to this basic wireframe.
+
+![A UI depicting 4 cards presented in a row. Each card consists of a hero image, linked title and author alongside description and applicable tags that can be revealed by a toggle button](https://jonathanbrincat.github.io/tmg-spark.technical-assessment/image/ref/mock.png)
+
+We would expect the main part of this task to take up to a day to complete. Please find our requirements listed below:
+
++ The website you create should function as a single page application
++ You should use either Vanilla.js(*Candidate comment: ...vanilla JavaScript. This was a common trick at the time to catch noobs because yes there were people out there who thought vanilla javascript was a framework/library!*), React.js or Vue.js
++ Avoid using bootstrap, or any other framework/library to style the layout
++ Your app must be fully responsive across all devices and screen sizes
++ Your app should support all the major browsers (Chrome, Firefox, Safari, IE11+)
++ If you decide to use other Flickr API feeds, note that some endpoints require an API key. You can apply for your own [here](https://www.flickr.com/services/apps/create/apply/)
++ Where possible, only request images with a 'safe' tag to ensure the application remains suitable for all ages
++ Code  should be pushed to a git repository
+Please, create a document explaining why you chose the technologies you have
+
+If you feel like you want to go the extra mile, here is a list of potential additions:
+
++ Think about how you might improve the speed of the page in terms of the images/content loading
++ Allow the page to have an infinite scroll (loading in more images as you scroll)
++ A search functionality based on tags, or possibly the title of the photo
++ How you can add in smooth animations that will add to the value of the application
++ Alternatively if you can think of any other features that you feel would further enhance your app, then we'd love to see what you can come up with!
+
+---
+
+Node: Unknown
+NPM: Unknown
+
+## Project setup
 
 Clone repository. From a Terminal/Command Line window navigate to the root directory
 
 ```bash
 npm install
+```
+
+### Compiles and hot-reloads for development
+```bash
 npm start
 ```
 
-## Demo
+### Compiles and minifies for production
+```bash
+npm run build
+```
 
-[Hosted on Github pages](https://pix8.github.io/tmg-spark/)
+## Candidate commentary
 
-## Explanation of tech used
-Note: Build tooling and allied stack is my own concoction and maintained by myself - Pogo App](https://github.com/pix8/pogo-app). It's boilerplate some stuff in there is not relevant; I have removed most of the cruft but retained the Vuejs supporting infrastructure to keep my options open.  
+### Explanation of tech used
+Note: Build tooling and allied stack is my own concoction and maintained by myself - [Pogo App](https://github.com/pix8/pogo-app). It's boilerplate some stuff in there is not relevant; I have removed most of the cruft but retained the Vuejs supporting infrastructure to keep my options open.  
 
 ### Reactjs
 Popular and universally acclaimed front-end framework. Could of quite happily gone with Vuejs however I feel React's prevalence makes it a more real-world candidate to showcase. Reactjs is ideal for rapidly building out user interfaces and component based architectures. Supported by a virtual DOM representation to drive interactions and reactivity. With reactivity itself the mechanism powering stateful transactions that bind a model(data) to drive(hydrate) the view(interface). When faced with a task declaratively describing a user interface that is hydrated by consuming a data service. Versus a clean sheet approach with vanilla javascript or using an assistive library such as Reactjs. Unless you are a sucker for pain, it really is a no-brainer.
@@ -37,6 +73,10 @@ Defactor extremely powerful/versatile css preprocessor. Boys use Less. Men use S
 TBC
 
 ## Issues
+![Gotcha!](https://jonathanbrincat.github.io/tmg-spark.technical-assessment/image/ref/issue.jpg)
+
+> *Candidate notes: It was later confirmed(strictly off-the-record of course!) that yes indeed, my suspicions were correct and this issue had been deliberately engineered into the problem to weed out weaker candidates but had anticipated someone like me calling them out lol. It is a little bit sneaky in my opinion. Basically the test was setting you up to fail and I'm not sure I agree with that from an ethical standpoint. But I passed muster nonetheless.*
+
 - Instructions direct candidates to ensure images are 'safe'. However this is the default configuration for unauthenticated calls(as indicated by the suggested endpoint) from thr Flickr service and there not really anything a candidate can do to satisfy this requirement any further.
 - Flickr public feed does not return a `description` field that is compatible with the wireframe supplied as guidance. For a start it is a string of `html`(so potentially unsafe to consume) and the data within is effectively an amalgamated representation of the entry itself. Wrapped in markup. Containing redundancy and duplication of information.
 - The flickr public feed has a very limited and restrictive feature set e.g. 20 entries max at a time. Some of which is undocumented. Althought there is the option to use an authenticated Flickr service that is very time-consuming to both research and implement(often requiring tandem feeds to extrapolate the right data). It also requires the candidate to painstakingly exorcise the full vocabulary of the Flickr APIs to craft and shape the necessary calls to fulfil the brief. Unless you have prior and thorough knowledge of the Flickr APIs this expectation is not very practical in a limited timespan. The authenticated APIs are also more specialised and discreet in their functions and geared towards individual users and collections which would require targetting a specific userID to consume. This is contrary to a public feed that indiscriminately dispenses data and images from a random pool of users.
