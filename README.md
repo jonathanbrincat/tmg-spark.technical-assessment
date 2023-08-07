@@ -28,7 +28,7 @@ If you feel like you want to go the extra mile, here is a list of potential addi
 
 ---
 
-Node: Unknown
+Node: Unknown  
 NPM: Unknown
 
 ## Project setup
@@ -52,7 +52,7 @@ npm run build
 ## Candidate commentary
 
 ### Explanation of tech used
-Note: Build tooling and allied stack is my own concoction and maintained by myself - [Pogo App](https://github.com/pix8/pogo-app). It's boilerplate some stuff in there is not relevant; I have removed most of the cruft but retained the Vuejs supporting infrastructure to keep my options open.  
+> Candidate note: *Build tooling and allied stack is my own concoction and maintained by myself - [Pogo App](https://github.com/pix8/pogo-app). It's boilerplate some stuff in there is not relevant; I have removed most of the cruft but retained the Vuejs supporting infrastructure to keep my options open.*
 
 ### Reactjs
 Popular and universally acclaimed front-end framework. Could of quite happily gone with Vuejs however I feel React's prevalence makes it a more real-world candidate to showcase. Reactjs is ideal for rapidly building out user interfaces and component based architectures. Supported by a virtual DOM representation to drive interactions and reactivity. With reactivity itself the mechanism powering stateful transactions that bind a model(data) to drive(hydrate) the view(interface). When faced with a task declaratively describing a user interface that is hydrated by consuming a data service. Versus a clean sheet approach with vanilla javascript or using an assistive library such as Reactjs. Unless you are a sucker for pain, it really is a no-brainer.
@@ -75,7 +75,7 @@ TBC
 ## Issues
 ![Gotcha!](https://jonathanbrincat.github.io/tmg-spark.technical-assessment/image/ref/issue.jpg)
 
-> *Candidate notes: It was later confirmed(strictly off-the-record of course!) that yes indeed, my suspicions were correct and this issue had been deliberately engineered into the problem to weed out weaker candidates but had anticipated someone like me calling them out lol. It is a little bit sneaky in my opinion. Basically the test was setting you up to fail and I'm not sure I agree with that from an ethical standpoint. But I passed muster nonetheless.*
+> *Candidate note: It was later confirmed(strictly off-the-record of course!) that yes indeed, my suspicions were correct and this issue had been deliberately engineered into the problem to weed out weaker candidates but they had not anticipated someone like me calling them out for it lol. It is a little bit sneaky in my opinion. Basically the test was setting you up to fail and I'm not sure I agree with that from an ethical standpoint. But I passed muster nonetheless.*
 
 - Instructions direct candidates to ensure images are 'safe'. However this is the default configuration for unauthenticated calls(as indicated by the suggested endpoint) from thr Flickr service and there not really anything a candidate can do to satisfy this requirement any further.
 - Flickr public feed does not return a `description` field that is compatible with the wireframe supplied as guidance. For a start it is a string of `html`(so potentially unsafe to consume) and the data within is effectively an amalgamated representation of the entry itself. Wrapped in markup. Containing redundancy and duplication of information.
