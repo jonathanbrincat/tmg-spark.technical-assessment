@@ -75,7 +75,7 @@ TBC
 ## Issues
 ![Gotcha!](https://jonathanbrincat.github.io/tmg-spark.technical-assessment/image/ref/issue.jpg)
 
-> *Candidate note: It was later confirmed(strictly off-the-record of course!) that yes indeed, my suspicions were correct and this issue had been deliberately engineered into the problem to weed out weaker candidates but they had not anticipated someone like me calling them out for it lol. It is a little bit sneaky in my opinion. Basically the test was setting you up to fail and I'm not sure I agree with that from an ethical standpoint. But I passed muster nonetheless.*
+> *Candidate note: It was later confirmed that my suspicions had been correct and this issue had been deliberately engineered into the problem to weed out weaker candidates; basically you were being setup to fail.*
 
 - Instructions direct candidates to ensure images are 'safe'. However this is the default configuration for unauthenticated calls(as indicated by the suggested endpoint) from thr Flickr service and there not really anything a candidate can do to satisfy this requirement any further.
 - Flickr public feed does not return a `description` field that is compatible with the wireframe supplied as guidance. For a start it is a string of `html`(so potentially unsafe to consume) and the data within is effectively an amalgamated representation of the entry itself. Wrapped in markup. Containing redundancy and duplication of information.
